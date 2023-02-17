@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+.App {
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+  
+}
+#calcContainer{
+  width: 450px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+  margin: 0 auto;
+  margin-top:20px;
+  border: 2px solid gray;
+  border-radius:20px;
+  background-color:#fff8f3;
+  color:#b10b85;
+  box-shadow: 3px 3px 4px gray;
+
+}
+
+#buttons-container{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  
+  /* border:2px solid blue; */
+/* 
+  margin: 0 auto; */
+  grid-gap:8px;
+}
+#bottom-btns{
+  display:flex;
+  justify-content:space-evenly;
+  grid-template-rows: 3fr;
+  grid-gap:8px;
+  margin-top:8px;
+  margin-bottom:30px;
+
+}
+
+#result{
+  background-color:#f0dee5;
+  margin:10%;
+  width:400px;
+  border-radius:20px;
+}
+
+#zero-btn{
+  width:168px;
+  border-radius:20px;
+
+  
+}
+.calc-button{
+  height:80px;
+  width:80px;
+  border-radius:100%;
+  border: 2px solid #827379;
+  font-size: 15px;
+  box-shadow: 1px 1px 4px gray;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.primary-container-btn{
+  color:#b10b85;
+  background-color:#ffd8ea;
+  
+}
+
+.primary-btn{
+  background-color:#ffddb0;
+  color:#805600;
+
+}
+
+.tertiary-btn{
+  background-color:#ffdbca;
+  color:#80543c;
+}
+
+button:active{
+  transform: scale(0.98);
+  opacity:0.8;
+}
