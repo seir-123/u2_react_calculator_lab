@@ -1,0 +1,77 @@
+.App {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: right;
+}
+
+
+#buttons-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 8px;
+  color: white;
+  
+}
+
+.calc-button {
+  height: 80px;
+  width: 80px;
+  font-size: 2rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1b1e;
+  color: white;
+}
+
+.calc-button:hover {
+  color: #1e192b;
+  background-color: #49454e;
+  cursor: pointer;
+}
+
+#zero-btn {
+  width: 170px;
+}
+
+#bottom-btns {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  grid-template-rows: 3fr;
+  grid-gap: 8px;
+}
+
+#display {
+ border-radius: 5px;
+ background-color: #e8def8;
+ color: #625b71;
+ 
+}
+
+#calcContainer {
+padding: 15px;
+border-radius: 1em;
+height: 600px;
+width: 400px;
+margin: auto;
+background-color: #24252d;
+width: fit-content;
+height: fit-content;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(165, 80, 80, 0.23) 0px 6px 6px;
+}
+
+.button C {
+  background-color: orange;
+}
+
