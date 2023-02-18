@@ -16,13 +16,20 @@ export default function Calculator() {
     
     const handleOpp = (event) =>{ //any time a non-number is pushed
         event.preventDefault();
-        setDigit (''); //reset digit
         let opp = event.target.value; //get the +/-/ etc
         setDisplay (eval(currentCalc)); //set the display to the current total
-        let newValue = opp; //hold the new value
-        setCurrentCalc(currentCalc + newValue);
-    }
- //if i type a number, iw ant it to be appended to a string, and i want it to appear on the display;
+         if (opp!= '%'){
+                setDigit (''); //reset digit
+                let newValue = opp; //hold the new value
+                setCurrentCalc(eval(currentCalc) + newValue);
+        }else{
+                let newValue = (eval(eval(currentCalc)) * .01)
+                setCurrentCalc (newValue)
+                setDigit (newValue);
+                setDisplay(newValue)
+        
+          }}
+ //if i type a number, iw ant it to be appended to the calculation string, and i want it to appear on the display;
  //if i type +/-/x/etc. I don't want anything shown
  //if i type a new number, i want the new number
  //but the eval should have operation, and both numbers
@@ -57,7 +64,7 @@ export default function Calculator() {
             <section id="buttons-container">
                 <button className="calc-button tertiary-btn" onClick={resetCalc}>AC</button>
                 <button className="calc-button tertiary-btn"><span className="material-symbols-rounded size-48" onClick={backSpace}>backspace</span></button>
-                <button className="calc-button tertiary-btn opp" value="%" onClick={handleOpp}><span className="material-symbols-rounded size-48">percent</span></button>
+                <button className="calc-button tertiary-btn" value="%" onClick={handleOpp}>%</button>
                 <button className="calc-button primary-btn" value="/" onClick={handleOpp}>/</button>
                 <button className="calc-button primary-container-btn" value="7" onClick={handleClick}>7</button>
                 <button className="calc-button primary-container-btn" value="8" onClick={handleClick}>8</button>
@@ -76,11 +83,7 @@ export default function Calculator() {
                 <button className="calc-button primary-container-btn" id="zero-btn" value="0" onClick={handleClick}>0</button>
                 <button className="calc-button primary-container-btn" value="." onClick={handleClick}>.</button>
                 <button className="calc-button primary-btn" onClick={handleSubmit}>=</button>
-              
             </section>
         </div>
     )
 }
-
-/*
-Variable for the result value */ 
